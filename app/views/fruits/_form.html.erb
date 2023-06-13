@@ -1,0 +1,77 @@
+<%= form_with(model: fruit) do |form| %>
+  <% if fruit.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(fruit.errors.count, "error") %> prohibited this fruit from being saved:</h2>
+
+      <ul>
+        <% fruit.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :headline, style: "display: block" %>
+    <%= form.text_field :headline %>
+  </div>
+
+  <div>
+    <%= form.label :image, style: "display: block" %>
+    <%= form.text_field :image %>
+  </div>
+
+  <div>
+    <%= form.label :gradient_dark, style: "display: block" %>
+    <%= form.text_field :gradient_dark %>
+  </div>
+
+  <div>
+    <%= form.label :gradient_light, style: "display: block" %>
+    <%= form.text_field :gradient_light %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :energy, style: "display: block" %>
+    <%= form.text_field :energy %>
+  </div>
+
+  <div>
+    <%= form.label :sugar, style: "display: block" %>
+    <%= form.text_field :sugar %>
+  </div>
+
+  <div>
+    <%= form.label :fat, style: "display: block" %>
+    <%= form.text_field :fat %>
+  </div>
+
+  <div>
+    <%= form.label :protein, style: "display: block" %>
+    <%= form.text_field :protein %>
+  </div>
+
+  <div>
+    <%= form.label :vitamins, style: "display: block" %>
+    <%= form.text_field :vitamins %>
+  </div>
+
+  <div>
+    <%= form.label :minerals, style: "display: block" %>
+    <%= form.text_field :minerals %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
